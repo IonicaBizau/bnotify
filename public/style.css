@@ -15,8 +15,9 @@ body, html {
 }
 
 .notification {
+  padding: 0 10px 10px 10px;
   display: none;
-  height: 80px;
+  min-height: 70px;
   width: 410px;
   margin: 15px;
   margin-top: 0;
@@ -82,3 +83,4 @@ body, html {
   right: 10px;
   top: 50px;
 }
+
