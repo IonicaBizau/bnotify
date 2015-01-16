@@ -1,8 +1,11 @@
 $(document).ready(function () {
 
+    // Connect to websocket
     var ws = new WebSocket("ws://localhost:1111");
 
     setTimeout(function () {
+
+        // Prepare data
         var argv = BAT.argv()
           , title = argv[5]
           , description = argv[6]
@@ -10,9 +13,24 @@ $(document).ready(function () {
           , duration = argv[8]
           , scrSize = BAT.getScreenSize()
           , $not = $(".notification")
+          ;
+
+        // Set the window and the title
+        $("#title").html(title);
+        $("#description").html(description);
+
+        // Set the icon
+        if (!icon) {
+            $("#icon", $not).hide();
+        } else {
+            $("#icon", $not).attr("src", icon);
+        }
+
+        // Compute positions
+        var br = $not.get(0).getBoundingClientRect()
           , nSize = {
                 width: $not.outerWidth(true)
-              , height: $not.outerHeight(true)
+              , height: $not.outerHeight(true) + 20
             }
           , position = {
                 left: scrSize.width - nSize.width
@@ -20,30 +38,21 @@ $(document).ready(function () {
             }
           ;
 
+        // WS Communication
         ws.onmessage = function (event) {
-            BAT.debug(event.data);
             event = JSON.parse(event.data);
             if (event.ev === "down") {
-                BAT.setWindowPosition(position.left, position.top += nSize.height + 10);
-            }
 
-            if (event.ev === "up") {
-                BAT.setWindowPosition(position.left, position.top -= nSize.height + 10);
+                $(position).animate({ top: position.top + nSize.height - 20 }, {
+                    duration: 100,
+                    step: function() {
+                        BAT.setWindowPosition(this.left, this.top);
+                    }
+                });
+
             }
         };
 
-
-        BAT.resize(nSize.width, nSize.height);
-        BAT.setWindowPosition(position.left, position.top);
-
-        if (!icon) {
-            $("#icon", $not).hide();
-        } else {
-            $("#icon", $not).attr("src", icon);
-        }
-
-        $("#title").html(title);
-        $("#description").html(description);
         ws.onopen = function () {
             ws.send(JSON.stringify({
                 ev: "down"
@@ -51,14 +60,15 @@ $(document).ready(function () {
             }));
         };
 
+        // Resize the window
+        BAT.resize(nSize.width, nSize.height);
+        BAT.setWindowPosition(position.left, position.top);
+
+        // Set timeout
         setTimeout(function() {
             $not.fadeIn();
             setTimeout(function() {
                 $not.fadeOut(function () {
-                    ws.send(JSON.stringify({
-                        ev: "up"
-                      , id: argv.slice(-1)[0]
-                    }));
                     BAT.closeWindow();
                 });
             }, parseInt(duration));
