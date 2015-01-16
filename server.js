@@ -45,8 +45,8 @@ app.page.add("/api/open", "post", function (lien) {
 
     console.log(command);
 
-    Exec(command, function (err, stdout) {
-        console.log(err || stdout);
+    Exec(command, function (err, stdout, stderr) {
+        console.log(err || stdout || stderr);
         delete _windows[id];
     });
 
@@ -59,7 +59,7 @@ var wss = new WebSocketServer({ server: app._server });
 wss.on("connection", function(ws) {
     ws.onmessage = function (e) {
         e = JSON.parse(e.data);
-        if (e.ev === "down") {
+        if (e.ev === "down" && _windows[e.id]) {
             _windows[e.id].ws = ws;
             for (var k in _windows) {
                 if (k === e.id) { continue; }
@@ -71,19 +71,6 @@ wss.on("connection", function(ws) {
                 }
             }
         }
-
-        if (e.ev === "up") {
-            delete _windows[e.id];
-            for (var k in _windows) {
-                var cWin = _windows[k];
-                if (cWin.ws) {
-                    cWin.ws.send(JSON.stringify({
-                        ev: "up"
-                    }));
-                }
-            }
-        }
     };
-    ws.send(JSON.stringify(), function() {});
 });
 
