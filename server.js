@@ -21,7 +21,6 @@ app.page.add("/", function (lien) {
 });
 
 app.page.add("/api/open", "post", function (lien) {
-    console.log(lien.data);
     var id = Math.random().toString(36);
 
     _windows[id] = lien.data = Ul.merge({
@@ -43,10 +42,7 @@ app.page.add("/api/open", "post", function (lien) {
         .replace("F", id)
         ;
 
-    console.log(command);
-
     Exec(command, function (err, stdout, stderr) {
-        console.log(err || stdout || stderr);
         delete _windows[id];
     });
 
