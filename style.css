@@ -1,0 +1,84 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: default;
+}
+
+body, html {
+  background: transparent;
+}
+
+.notification {
+  display: none;
+  height: 80px;
+  width: 410px;
+  margin: 15px;
+  margin-top: 0;
+  position: relative;
+  border-radius: 4px;
+  color: #4d4d4d;
+  font-family: Helvetica, Arial, sans-serif;
+  -webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+  background-image: -moz-linear-gradient(rgba(255, 255, 255, 0.9), rgba(235, 235, 235, 0.9));
+  background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.9), rgba(235, 235, 235, 0.9));
+  background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(235, 235, 235, 0.9));
+}
+
+.notification h2 {
+  padding: 20px 0 0 5px;
+  font: bold 18px "Open Sans", Myriad, Helvetica, Arial, sans-serif;
+  text-shadow: 0px 2px 1px #fff;
+}
+
+.notification p {
+  font: bold 13px "Open Sans", Myriad, Helvetica, Arial, sans-serif;
+  text-shadow: 0px 1px 1px #fff;
+}
+
+.notification img {
+  float: left;
+  padding: 10px 15px 0 15px;
+  width: 60px;
+}
+
+.buttons a {
+  display: block;
+  width: 60px;
+  margin: 5px;
+  padding: 8px;
+  position: absolute;
+  border: 1px solid #999;
+  border-radius: 4px;
+  color: #222;
+  font: 13px Helvetica, Arial, sans-serif;
+  text-align: center;
+  text-decoration: none;
+  -webkit-box-shadow: 0px 1px 1px #fff;
+  box-shadow: 0px 1px 1px #fff;
+  background-image: -moz-linear-gradient(rgba(255, 255, 255, 0.5), rgba(235, 235, 235, 0.5));
+  background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.5), rgba(235, 235, 235, 0.5));
+  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(235, 235, 235, 0.5));
+}
+
+.buttons a:hover {
+  background-image: -moz-linear-gradient(#ffffff, #ebebeb);
+  background-image: -webkit-linear-gradient(#ffffff, #ebebeb);
+  background-image: linear-gradient(#ffffff, #ebebeb);
+}
+
+.snooze {
+  right: 10px;
+  top: 8px;
+}
+
+.close {
+  right: 10px;
+  top: 50px;
+}
