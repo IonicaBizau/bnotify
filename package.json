@@ -1,0 +1,30 @@
+{
+  "name": "bnotify",
+  "version": "1.0.0",
+  "description": "A notification library written in NodeJS, for the BAT platform.",
+  "main": "lib/index.js",
+  "dependencies": {
+    "forever-monitor": "^1.5.2",
+    "jsonrequest": "^1.1.0",
+    "ul": "^1.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node test",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:IonicaBizau/bnotify.git"
+  },
+  "keywords": [
+    "bat",
+    "notify"
+  ],
+  "author": "Ionică Bizău <bizauionica@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/IonicaBizau/bnotify/issues"
+  },
+  "homepage": "https://github.com/IonicaBizau/bnotify"
+}
