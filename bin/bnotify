@@ -1,0 +1,10 @@
+#!/usr/bin/env node
+
+var BNotify = require("../lib");
+
+BNotify({
+    title: process.argv[2] || ""
+  , description: process.argv[3] || ""
+  , duration: process.argv[4] || 4000
+  , icon: process.argv[5] || "/bell.png"
+});
