@@ -1,5 +1,9 @@
 $(document).ready(function () {
 
+    $(window).on("contextmenu", function () {
+        return false;
+    });
+
     // Connect to websocket
     var ws = new WebSocket("ws://localhost:1111");
 
