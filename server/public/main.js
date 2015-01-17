@@ -47,7 +47,7 @@ $(document).ready(function () {
             event = JSON.parse(event.data);
             if (event.ev === "down") {
 
-                $(position).animate({ top: position.top + nSize.height - 20 }, {
+                $(position).animate({ top: position.top + nSize.height - 10 }, {
                     duration: 100,
                     step: function() {
                         BAT.setWindowPosition(this.left, this.top);
