@@ -3,6 +3,7 @@ var Lien = require("lien")
   , WebSocketServer = require("ws").Server
   , Exec = require("child_process").exec
   , Ul = require("ul")
+  , Bat = require("batjs")
   ;
 
 // Opened Windows
@@ -20,6 +21,7 @@ app.page.add("/", function (lien) {
     lien.file("/index.html");
 });
 
+// Listen for requests on /api/open
 app.page.add("/api/open", "post", function (lien) {
     var id = Math.random().toString(36);
 
@@ -33,16 +35,18 @@ app.page.add("/api/open", "post", function (lien) {
     lien.data.title = lien.data.title.replace(/\"/g, "\\\"");
     lien.data.description = lien.data.description.replace(/\"/g, "\\\"");
 
-    var command =
-        "bat -d http://localhost:1111 --tt -u \"F\" \"F\" \"F\" \"F\" \"F\""
-        .replace("F", lien.data.title)
-        .replace("F", lien.data.description)
-        .replace("F", lien.data.icon)
-        .replace("F", lien.data.duration)
-        .replace("F", id)
-        ;
-
-    Exec(command, function (err, stdout, stderr) {
+    Bat({
+        d: "http://localhost:1111"
+      , tt: true
+      , u: true
+      , _: [
+            lien.data.title
+          , lien.data.description
+          , lien.data.icon
+          , lien.data.duration
+          , id
+        ]
+    }, function (err, stdout) {
         delete _windows[id];
     });
 
