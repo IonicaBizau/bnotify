@@ -1,9 +1,17 @@
 ![](http://i.imgur.com/GDWvTpp.png)
 
 # BNotify
-A notification system written in NodeJS using the BAT platform.
+A notification system written in NodeJS using the [BAT platform](https://github.com/IonicaBizau/bat).
 
 ## Installation
+
+Ensure you have [installed](https://github.com/IonicaBizau/dotfiles#applications)
+and [configured NodeJS and NPM](https://github.com/IonicaBizau/dotfiles#npm-config).
+
+Ensure you have installed the [BAT](https://github.com/IonicaBizau/bat#installation)
+on your machine.
+
+Then, you can install **`bnotify`**.
 
 ```sh
 $ npm install -g bnotify
