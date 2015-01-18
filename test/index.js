@@ -1,4 +1,4 @@
-// Library
+// Dependencies
 var BNotify = require("../lib");
 
 // Show the notification
