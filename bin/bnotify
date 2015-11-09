@@ -3,6 +3,10 @@
 // Library
 var BNotify = require("../lib");
 
+if (~process.argv.indexOf("-h") || ~process.argv.indexOf("--help")) {
+    return console.log("Usage: bnotify <title> <description> <duration> <icon>");
+}
+
 // Show the notification
 BNotify({
     title: process.argv[2] || ""
