@@ -1,6 +1,6 @@
 {
   "name": "bnotify",
-  "version": "1.2.0",
+  "version": "1.0.0",
   "description": "A notification system written in NodeJS using the BAT platform.",
   "main": "lib/index.js",
   "bin": "./bin/bnotify",
