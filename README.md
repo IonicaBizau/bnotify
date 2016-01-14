@@ -1,8 +1,8 @@
 [![bnotify](http://i.imgur.com/GDWvTpp.png)](#)
 
-# `$ bnotify` [![Support this project][donate-now]][paypal-donations]
+# `$ bnotify` [![PayPal](https://img.shields.io/badge/%24-paypal-f39c12.svg)][paypal-donations] [![Version](https://img.shields.io/npm/v/bnotify.svg)](https://www.npmjs.com/package/bnotify) [![Downloads](https://img.shields.io/npm/dt/bnotify.svg)](https://www.npmjs.com/package/bnotify) [![Get help on Codementor](https://cdn.codementor.io/badges/get_help_github.svg)](https://www.codementor.io/johnnyb?utm_source=github&utm_medium=button&utm_term=johnnyb&utm_campaign=github)
 
-A notification system written in NodeJS using the BAT platform.
+> A notification system written in NodeJS using the BAT platform.
 
 ## Installation
 
