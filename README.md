@@ -1,20 +1,31 @@
+
 [![bnotify](http://i.imgur.com/GDWvTpp.png)](#)
 
 # `$ bnotify` [![PayPal](https://img.shields.io/badge/%24-paypal-f39c12.svg)][paypal-donations] [![Version](https://img.shields.io/npm/v/bnotify.svg)](https://www.npmjs.com/package/bnotify) [![Downloads](https://img.shields.io/npm/dt/bnotify.svg)](https://www.npmjs.com/package/bnotify) [![Get help on Codementor](https://cdn.codementor.io/badges/get_help_github.svg)](https://www.codementor.io/johnnyb?utm_source=github&utm_medium=button&utm_term=johnnyb&utm_campaign=github)
 
 > A notification system written in NodeJS using the BAT platform.
 
-## Installation
+## :cloud: Installation
 
 You can install the package globally and use it as command line tool:
+
 
 ```sh
 $ npm i -g bnotify
 ```
 
+
 Then, run `bnotify --help` and see what the CLI tool can do.
 
+
+```
+$ bnotify --help
+Usage: bnotify <title> <description> <duration> <icon>
+```
+
+
 Ensure you have [installed](https://github.com/IonicaBizau/dotfiles#applications) and [configured NodeJS and NPM](https://github.com/IonicaBizau/dotfiles#npm-config).
+
 
 Ensure you have installed the [BAT](https://github.com/IonicaBizau/bat#installation) on your machine.
 
@@ -30,13 +41,17 @@ $ bnotify 'Hello World' 'I am BNotify' 10000
 ### Multiple notifications
 ![](http://i.imgur.com/nnHdnDu.png)
 
-## Example
+
+## :clipboard: Example
+
 
 Here is an example how to use this package as library. To install it locally, as library, you can do that using `npm`:
 
 ```sh
 $ npm i --save bnotify
 ```
+
+
 
 ```js
 // Dependencies
@@ -53,17 +68,15 @@ BNotify({
 });
 ```
 
-## Documentation
+## :memo: Documentation
 
 For full API reference, see the [DOCUMENTATION.md][docs] file.
 
-## How to contribute
+## :yum: How to contribute
 Have an idea? Found a bug? See [how to contribute][contributing].
 
-## Where is this library used?
-If you are using this library in one of your projects, add it in this list. :sparkles:
 
-## License
+## :scroll: License
 
 [MIT][license] © [Ionică Bizău][website]
 
