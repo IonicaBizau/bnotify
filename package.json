@@ -3,7 +3,9 @@
   "version": "1.3.2",
   "description": "A notification system written in NodeJS using the BAT platform.",
   "main": "lib/index.js",
-  "bin": "./bin/bnotify",
+  "bin": {
+    "bnotify": "./bin/bnotify"
+  },
   "dependencies": {
     "forever-monitor": "^1.5.2",
     "jsonrequest": "^1.1.0",
@@ -19,7 +21,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:IonicaBizau/bnotify.git"
+    "url": "git+ssh://git@github.com/IonicaBizau/bnotify.git"
   },
   "keywords": [
     "bat",
@@ -82,5 +84,8 @@
     "menu/",
     "cli.js",
     "index.js"
-  ]
+  ],
+  "directories": {
+    "example": "example"
+  }
 }
