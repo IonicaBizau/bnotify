@@ -34,19 +34,15 @@ Ensure you have [installed](https://github.com/IonicaBizau/dotfiles#applications
 Ensure you have installed the [BAT](https://github.com/IonicaBizau/bat#installation) on your machine.
 
 ## Screenshots
-
 ```sh
 $ bnotify 'Hello World' 'I am BNotify' 10000
 ```
-
 ![](http://i.imgur.com/kzaJa58.png)
 
 ### Multiple notifications
-
 ![](http://i.imgur.com/nnHdnDu.png)
 
 ### Multiple notifications
-
 ![](http://i.imgur.com/nnHdnDu.png)
 
 
