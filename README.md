@@ -15,7 +15,11 @@ You can install the package globally and use it as command line tool:
 
 
 ```sh
-$ npm i -g bnotify
+# Using npm
+npm install --global bnotify
+
+# Using yarn
+yarn global add bnotify
 ```
 
 
@@ -34,25 +38,33 @@ Ensure you have [installed](https://github.com/IonicaBizau/dotfiles#applications
 Ensure you have installed the [BAT](https://github.com/IonicaBizau/bat#installation) on your machine.
 
 ## Screenshots
+
 ```sh
 $ bnotify 'Hello World' 'I am BNotify' 10000
 ```
+
 ![](http://i.imgur.com/kzaJa58.png)
 
 ### Multiple notifications
+
 ![](http://i.imgur.com/nnHdnDu.png)
 
 ### Multiple notifications
+
 ![](http://i.imgur.com/nnHdnDu.png)
 
 
 ## :clipboard: Example
 
 
-Here is an example how to use this package as library. To install it locally, as library, you can do that using `npm`:
+Here is an example how to use this package as library. To install it locally, as library, you can do that using `npm` (or `yarn`):
 
 ```sh
-$ npm i --save bnotify
+# Using npm
+npm install --save bnotify
+
+# Using yarn
+yarn add bnotify
 ```
 
 
@@ -80,7 +92,9 @@ There are few ways to get help:
 
  1. Please [post questions on Stack Overflow](https://stackoverflow.com/questions/ask). You can open issues with questions, as long you add a link to your Stack Overflow question.
  2. For bug reports and feature requests, open issues. :bug:
+
  3. For direct and quick help, you can [use Codementor](https://www.codementor.io/johnnyb). :rocket:
+
 
 
 ## :memo: Documentation
