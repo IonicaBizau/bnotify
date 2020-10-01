@@ -11,7 +11,7 @@
     "jsonrequest": "^1.1.0",
     "ul": "^1.1.0",
     "lien": "0.0.7",
-    "ws": "0.6.5",
+    "ws": "7.3.1",
     "batjs": "1.0.0"
   },
   "devDependencies": {},
