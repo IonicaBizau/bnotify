@@ -13,6 +13,3 @@ Opens a new notification window.
  - `duration` (Number): The notification duration.
  - `icon` (String): The notification icon.
 
-#### Return
-- ****
-
